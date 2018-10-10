@@ -90,6 +90,6 @@ int a = 1;
 while(a <= 5)
 {
     Console.WriteLine(a);
-    a++;
+    a = a + 1;
 }
 ```
