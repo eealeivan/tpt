@@ -25,6 +25,7 @@ Example:
 ```csharp
 int a = 2;
 a = a + 1;
+string b = Console.ReadLine();
 ```
 
 ## Comparison Operators 
