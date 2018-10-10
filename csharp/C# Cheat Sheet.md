@@ -35,6 +35,7 @@ string b = Console.ReadLine();
 *	`>=` – greater than or equal to;
 *	`==` – equal to;
 *	`!=` – not equal to.
+
 All comparison operators return `bool` result.
 
 ## Conditional Statements
