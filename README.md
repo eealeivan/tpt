@@ -1,0 +1,2 @@
+# tpt
+Tallinna Polütehnikum
