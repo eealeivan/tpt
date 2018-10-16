@@ -18,7 +18,7 @@ Assignment works from right to left. First expression on the right is calculated
 
 Syntax:
 ```
-<type> <variable> = <expression>;
+<type> <variable name> = <expression>;
 ```
 
 Example:
@@ -81,16 +81,64 @@ Syntax:
 ```
 while(<boolean statement>)
 {
+    <loop body>
 }
 ```
 
 Example:
 ```csharp
-int a = 1;
+int i = 1;
 
-while(a <= 5)
+while(i <= 5)
 {
-    Console.WriteLine(a);
-    a = a + 1;
+    Console.WriteLine(i);
+    i = i + 1;
+}
+```
+
+### for
+Loop that allows you to execute a specific number of times.
+Syntax:
+```
+for(<init>; <condition>; increment)
+{
+    <loop body>
+}
+```
+
+
+Example:
+```csharp
+for(int i = 0; i < 5; i = i + 1)
+{
+    Console.WriteLine(i);
+}
+```
+
+## Methods
+Method is a way of grouping the code. C# is an object oriented language, so each method should belong to some class.
+Each C# program has at least one class with method named `Main`.
+
+To use a method you need first to **define** a method and then **call** it.
+
+Syntax:
+```
+<access specifier> <return type> <method name>(<type> <parameter name>, ...) 
+{
+   <method body>
+}
+```
+
+Example:
+```csharp
+public static void Main(string[] args)
+{
+    int sum = Sum(2, 3);
+    Console.WriteLine(sum);
+}
+
+public int Sum(int a, int b)
+{
+    return a + b;
 }
 ```
