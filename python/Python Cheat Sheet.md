@@ -84,7 +84,8 @@ The easiest type of loop. Repeats until its condition is `true`. You need to cha
 Syntax:
 ```
 while <boolean statement>:
-    #code
+    # loop
+    # body
 ```
 
 Example:
@@ -96,3 +97,21 @@ while a <= 5:
     a = a + 1
 ```
 
+## Functions
+Function is a way of grouping the code. To use a method you need first to **define** a method and then **call** it.
+
+Syntax:
+```
+def  <function name>(<parameter>, ...):
+    # function
+    # body
+```
+
+Example:
+```python
+def sum(a, b):
+    return a + b
+
+s = sum(2, 4)
+print(s)
+```
