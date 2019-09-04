@@ -6,6 +6,15 @@ Python uses new lines to complete a command, as opposed to other programming lan
 
 Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.
 
+## Comments
+
+You often might want to add some explanations to the code which should not be interpreted as actual code. To do that `#` is used. Everything to the right of the `#` is ignored by python interpreter.
+
+```python
+# this line is just a comment
+print("Hi") # will print 'Hi' to console and ignore everything after that
+```
+
 ## Types
 
 *	`int` – whole number;
@@ -15,9 +24,9 @@ Python relies on indentation, using whitespace, to define scope; such as the sco
 
 You can convert between types:
 ```python
-a = int("234") # converts string "234" to int
-b = float("2.9") # converts string "2.9" to float
-c = int(3.4) # converts float 3.4 to int, c will be 3
+a = int("234") # converts string "234" to int and saves the value to 'a' variable
+b = float("2.9") # converts string "2.9" to float and saves the value to 'b' variable
+c = int(3.4) # converts float 3.4 to int, and saves the value (which will be 3) to 'c' variable
 ```
 
 ## Assignment
@@ -31,10 +40,10 @@ Syntax:
 
 Example:
 ```python
-a = 2;
-a = a + 1;
-b = input("Enter a value: ")
-c = a + int(b) # b is str
+a = 2; # saves value 2 to varibale 'a'
+a = a + 1; # takes current 'a' value which is 2, adds 2 and 1 and saves 3 to variable 'a'
+b = input("Enter a value: ") # reads string value from console and saves it to variable 'b'
+c = a + int(b) # takes 'a' value which is 3, converts 'b' to int and saves the sum to variable 'c'
 ```
 
 ## Comparison Operators 
