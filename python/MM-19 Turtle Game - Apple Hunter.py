@@ -25,13 +25,18 @@ player.color('blue')
 player.speed(0)
 player.penup()
 
-# create apple
-apple = turtle.Turtle()
-apple.shape('circle')
-apple.color('red')
-apple.penup()
-apple.speed(0)
-apple.setpos(100, 100)
+# create apples
+max_apples = 5
+apples = []
+for i in range(max_apples):
+    apple = turtle.Turtle()
+    apple.shape('circle')
+    apple.color('red')
+    apple.penup()
+    apple.speed(0)
+    apple.setpos(random.randint(-300, 300), random.randint(-300, 300))
+    apple.right(random.randint(0, 360))
+    apples.append(apple)
 
 speed = 1
 
@@ -73,14 +78,14 @@ while True:
     if not is_in_boundaries(player):
         player.right(180)
  
-    if is_collision(player, apple):
-        apple.setpos(
-            random.randint(-300, 300), 
-            random.randint(-300, 300))
-        apple.right(random.randint(0, 360))
-    
-    apple.forward(1)
-    if not is_in_boundaries(apple):
-        apple.right(180)
+    for apple in apples:
+        if is_collision(player, apple):
+            apple.setpos(random.randint(-300, 300), random.randint(-300, 300))
+            apple.right(random.randint(0, 360))
+        else:
+            apple.forward(1)
+
+        if not is_in_boundaries(apple):
+            apple.right(180)
 
 turtle.done()
